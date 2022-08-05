@@ -1,0 +1,255 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE93C236-E813-47D9-BAA0-5C64A5B1A461}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication</RootNamespace>
+    <AssemblyName>WebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44362</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome.exe" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome_elf.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome_proxy.exe" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome_pwa_launcher.exe" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\D3DCompiler_47.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\elevation_service.exe" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\eventlog_provider.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\libEGL.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\libGLESv2.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\mojo_core.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\notification_helper.exe" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\vk_swiftshader.dll" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\vulkan-1.dll" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\PlaywrightController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ms-playwright\chromium-1015\chrome-win\104.0.5112.48.manifest" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome_100_percent.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\chrome_200_percent.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\debug.log" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\First Run" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\icudtl.dat" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\af.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\am.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ar-XB.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ar.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\bg.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\bn.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ca.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\cs.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\da.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\de.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\el.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\en-GB.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\en-US.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\en-XA.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\es-419.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\es.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\et.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\fa.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\fi.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\fil.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\fr.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\gu.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\he.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\hi.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\hr.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\hu.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\id.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\it.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ja.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\kn.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ko.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\lt.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\lv.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ml.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\mr.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ms.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\nb.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\nl.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\pl.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\pt-BR.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\pt-PT.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ro.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ru.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\sk.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\sl.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\sr.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\sv.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\sw.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ta.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\te.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\th.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\tr.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\uk.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\ur.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\vi.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\zh-CN.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\locales\zh-TW.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\MEIPreload\manifest.json" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\MEIPreload\preloaded_data.pb" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\resources.pak" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\v8_context_snapshot.bin" />
+    <Content Include="ms-playwright\chromium-1015\chrome-win\vk_swiftshader_icd.json" />
+    <Content Include="ms-playwright\chromium-1015\INSTALLATION_COMPLETE" />
+    <Content Include="ms-playwright\.gitkeep" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Playwright, Version=1.24.1.0, Culture=neutral, PublicKeyToken=db12f80f85d8ba23, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Playwright.1.24.1\lib\netstandard2.0\Microsoft.Playwright.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.5\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59069</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44362/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
