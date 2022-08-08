@@ -15,11 +15,12 @@ public class PlaywrightController : ApiController
     [Route("")]
     public async Task<HttpResponseMessage> Get(string url = "https://github.com/microsoft/playwright")
     {
-        var playwright = await Playwright.CreateAsync();
+        var playwright = await Playwright.CreateAsync(
+            driversPath: HostingEnvironment.MapPath(@"~/playwright"));
 
         var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
-            ExecutablePath = HostingEnvironment.MapPath(@"~/ms-playwright/chromium-1015/chrome-win/chrome.exe")
+            ExecutablePath = HostingEnvironment.MapPath(@"~/playwright/ms-playwright/chromium-1015/chrome-win/chrome.exe")
         });
         var page = await browser.NewPageAsync();
         await page.GotoAsync(url);

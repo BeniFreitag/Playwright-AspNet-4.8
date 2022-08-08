@@ -348,5 +348,8 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-/WebApplication/ms-playwright/chrom*
-/Website/ms-playwright/chrom*
+
+# Playwright installation
+/Web*/playwright/ms-playwright/chrom*
+/Web*/playwright/.playwright/node/*
+/Web*/playwright/.playwright/package/*
